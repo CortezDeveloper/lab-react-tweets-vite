@@ -1,9 +1,9 @@
 import React from 'react';
-import ProfileImage from './components/ProfileImage';
-import User from './components/User';
-import Timestamp from './components/Timestamp';
-import Message from './components/Message';
-import Actions from './components/Actions';
+import ProfileImage from './ProfileImage';
+import User from './User';
+import Timestamp from './Timestamp';
+import Message from './Message';
+import Actions from './Actions';
 
 function Tweet({ tweet }) {
   const { user, timestamp, message } = tweet
@@ -11,7 +11,7 @@ function Tweet({ tweet }) {
 
   return (
     <div className="tweet">
-      <ProfileImage image={IMAGE_URL} />
+      <ProfileImage image={user.image} />
       {/* <img
         src="https://education-team-2020.s3.eu-west-1.amazonaws.com/web-dev/ih_logo.jpeg"
         className="profile"
@@ -23,13 +23,13 @@ function Tweet({ tweet }) {
           <span className="user">
             {/* <span className="name">Ironhack</span>
             <span className="handle">@ironhack</span> */}
-             <User name={USER_NAME} handle={USER_HANDLE} />
+             <User name={user.name} handle={user.handle} />
           </span>
 
-          <Timestamp time={TWEET_TIMESTAMP} />
+          <Timestamp time={timestamp} />
         </div>
 
-        <Message message={TWEET_MESSAGE} />
+        <Message message={message} />
 
         {/* <p className="message">
           On December 7th, we will be hosting a #webinar that will introduce you

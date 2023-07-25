@@ -1,9 +1,9 @@
 import React from 'react';
 
-function ProfileImage() {
+function ProfileImage(props) {
   return (
     <img
-      src={image}
+      src={props.image}
       className="profile"
       alt="profile"
     />
